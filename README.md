@@ -163,8 +163,4 @@ python -m data.split_metadata --help
 
 跨数据集实验是在 Juliet 训练后直接测试 Big-Vul，不进行微调。Big-Vul 的定位目标来自修复补丁中删除或修改的行，是代理标签；其 Top-k 指标不能直接等同于人工确认漏洞行的分类结果。更多基线和消融结果见[论文说明](docs/paper-and-code.md)。
 
-## 引用与许可证
 
-参考题名：*CodeExplorer: Structure-Aware Hierarchical Modeling for Line-Level Vulnerability Localization*。提供的 PDF 仍包含匿名作者、会议名和 DOI 占位符，暂不生成正式 BibTeX 或声称已在 ACM CCS 发表。论文 PDF 未随本次仓库整理加入版本控制。
-
-当前仓库未提供 `LICENSE` 文件，本次保留这一状态，未新增许可证声明。
