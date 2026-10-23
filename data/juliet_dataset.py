@@ -4,7 +4,7 @@ from pathlib import Path
 import csv
 import hashlib
 
-from joern_utils import load_joern_edges
+from graph.joern_utils import load_joern_edges
 
 
 class JulietDataset(Dataset):

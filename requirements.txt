@@ -1,0 +1,11 @@
+# Direct dependencies found in the source imports.
+# Not a locked reproduction environment. Select a suitable PyTorch build first.
+torch
+torch-geometric
+transformers
+numpy
+pandas
+scikit-learn
+tqdm
+loguru
+matplotlib

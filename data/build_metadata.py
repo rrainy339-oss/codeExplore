@@ -1,3 +1,4 @@
+import argparse
 import re
 import csv
 from pathlib import Path
@@ -156,12 +157,22 @@ def build_metadata(
 # =======================
 # Entry
 # =======================
-if __name__ == "__main__":
-    JULIET_SRC = Path(r"juliet-dynamic-master\testcases")  # Juliet 数据集路径
-    OUTPUT_CSV = Path(r"metadata\metadata_juliet.csv")
-
-    build_metadata(
-        source_root=JULIET_SRC,
-        output_csv=OUTPUT_CSV,
-        project_name="Juliet"
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Build heuristic line-level metadata from Juliet .c source files."
     )
+    parser.add_argument("--source-root", type=Path, required=True)
+    parser.add_argument("--output-csv", type=Path, required=True)
+    parser.add_argument("--project-name", default="Juliet")
+    args = parser.parse_args(argv)
+    if not args.source_root.is_dir():
+        parser.error(f"source directory does not exist: {args.source_root}")
+    build_metadata(
+        source_root=args.source_root,
+        output_csv=args.output_csv,
+        project_name=args.project_name,
+    )
+
+
+if __name__ == "__main__":
+    main()

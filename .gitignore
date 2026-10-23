@@ -1,0 +1,32 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Local data and experiment artifacts (data/ contains source code)
+/datasets/
+/linevul/
+/juliet/
+/juliet-dynamic-master/
+/metadata/
+/cache/
+/.cache/
+/checkpoints/
+/logs/
+/runs/
+/results/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example

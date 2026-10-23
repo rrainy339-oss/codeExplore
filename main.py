@@ -7,8 +7,8 @@ Main entry for training and evaluation.
 import argparse
 import torch
 from config import build_config_from_args
-from train import train_one_epoch, validate
-from evaluate import evaluate
+from training.train import train_one_epoch, validate
+from training.evaluate import evaluate
 from utils.logger import setup_logger
 
 # === Model imports ===
